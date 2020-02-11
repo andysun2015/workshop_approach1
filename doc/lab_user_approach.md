@@ -65,18 +65,18 @@ The solution architect would be separated into two part: (1) Get User Credential
 Use the following button to reset the device.
 ![device_reset_button.png](../pics/user_provision_approach/device_reset_button.png)
 Then it will start Soft AP mode with previous Soft AP setting in Step 3, use android default app to connect to it.
-![wifi_setting.png](../pics/user_provision_approach/wifi_setting.png)
+![wifi_setting.jpg](../pics/user_provision_approach/wifi_setting.jpg)
 
 
 ## Step 7. - Go to page 3 (app STEP 3 page) to push the button to provision the user credential.
 
 Use the button “CONNECT TO PROVISION” to connect to Soft AP, it will start provisioning once it connect to the Soft AP.
-![step3_page.png](../pics/user_provision_approach/step3_page.png)
+![step3_page.jpg](../pics/user_provision_approach/step3_page.jpg)
 There will be a pop-up a message to show the provision result.
 
-![step3_page_reply.png](../pics/user_provision_approach/step3_page_reply.png)
+![step3_page_reply.jpg](../pics/user_provision_approach/step3_page_reply.jpg)
 **Notice: There is a timeout in device soft AP started after android app connecting to it. If time’s up with no provision, then you need to push the reset button to restart the soft AP process. You can configure this timeout here:**
-![app_device_connection_tiimeout.png](../pics/user_provision_approach/app_device_connection_tiimeout.png)
+![app_device_connection_timeout.png](../pics/user_provision_approach/app_device_connection_timeout.png)
 
 ## Step 8. - Check the user credential work or not. (By AWS IoT Core Test)
 
