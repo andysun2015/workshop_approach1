@@ -17,7 +17,7 @@ In this lab, we will create a demo to provision personal user credential and Wi-
 The solution architect would be separated into two part: (1) Get User Credential by Android app. (2) Android app provision the user credential to device.
 (1)  Get User Credential by Android app：
 ![Device_certificate_creation.png](../pics/user_provision_approach/Device_certificate_creation.png) (2) Android app provision the user credential to device.
-![Android app provision.png](../pics/user_provision_approach/Android app provision.png)
+![Android_app_provision.png](../pics/user_provision_approach/Android_app_provision.png)
 ## Prerequisite
 
 1. This demo take Ameba Z2 as reference board, which have to build code by IAR.
@@ -33,9 +33,9 @@ The solution architect would be separated into two part: (1) Get User Credential
 
 1. Fill in app/src/main/java/com/amazonaws/youruserpools/AppHelper.java with the userPoolId, clientId, and clientSecret.
     1. check these information in your AWS Cognito Service:
-    2. [Image: image.png]
+    2. ![info_in_cognito.png](../pics/user_provision_approach/info_in_cognito.png)
     3. Fill in these information at this location:
-    4. [Image: image.png]
+    4. ![cognito_info_in_code.png](../pics/user_provision_approach/cognito_info_in_code.png)
 2. Build and app and install it to the Android Phone.
 
 
@@ -43,40 +43,40 @@ The solution architect would be separated into two part: (1) Get User Credential
 ## Step 3. - Build and Run the Amazon FreeRTOS approach 1 Project.
 
 1. Fill in Soft AP SSID and password in amazon-freertos\demos\realtek\amebaz2\common\config_files\aws_wifi_config.h
-2. [Image: image.png]
+2. ![SoftAPSSID_in_code.png](../pics/user_provision_approach/SoftAPSSID_in_code.png)
 3. Fill in your endpoint information in amazon-freertos\demos\common\include\aws_clientcredential.h
-4. [Image: image.png]
+4. ![endpoint_in_code.png](../pics/user_provision_approach/endpoint_in_code.png)
 5. Build and flash to the device by IAR IDE, then reset the device to let it enter SoftAP mode.
-6. [Image: image.png]
+4. ![IAR_build.png](../pics/user_provision_approach/IAR_build.png)
 
 ## Step 4. - Use the android app to get the user credential from AWS Service.
 
 1. Log in the App.
-2. [Image: image.png]
+2. ![cognito_login.png](../pics/user_provision_approach/cognito_login.png)
 3. Go to “cert Provision” page and use the UID (Device ID) to get the user credential from AWS Service (push the RE-GENKEY). 
-4. [Image: image.png]
+4. ![goto_certprovision_page.png](../pics/user_provision_approach/goto_certprovision_page.png)
 
-[Image: image.png]
+![step1_page.png](../pics/user_provision_approach/step1_page.png)
 ## Step 5. - Go to STEP 2 Page to fill in the Wi-Fi credential information which you want the device connect to, then push the “SETUP WIFI CONFIG“.
 
-[Image: image.png]
+![step2_page.png](../pics/user_provision_approach/step2_page.png)
 ## Step 6. - Reset the device to start to the Soft AP mode of the device, then use android app setting to connect to it.
 
 Use the following button to reset the device.
-[Image: image.png]
+![device_reset_button.png](../pics/user_provision_approach/device_reset_button.png)
 Then it will start Soft AP mode with previous Soft AP setting in Step 3, use android default app to connect to it.
-[Image: Screenshot_20200210-141134.jpg]
+![wifi_setting.png](../pics/user_provision_approach/wifi_setting.png)
 
 
 ## Step 7. - Go to page 3 (app STEP 3 page) to push the button to provision the user credential.
 
 Use the button “CONNECT TO PROVISION” to connect to Soft AP, it will start provisioning once it connect to the Soft AP.
-[Image: Screenshot_20200211-113458.jpg]
+![step3_page.png](../pics/user_provision_approach/step3_page.png)
 There will be a pop-up a message to show the provision result.
 
-[Image: Screenshot_20200211-113455.jpg]
+![step3_page_reply.png](../pics/user_provision_approach/step3_page_reply.png)
 **Notice: There is a timeout in device soft AP started after android app connecting to it. If time’s up with no provision, then you need to push the reset button to restart the soft AP process. You can configure this timeout here:**
-[Image: image.png]
+![app_device_connection_tiimeout.png](../pics/user_provision_approach/app_device_connection_tiimeout.png)
 
 ## Step 8. - Check the user credential work or not. (By AWS IoT Core Test)
 
