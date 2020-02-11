@@ -17,7 +17,7 @@ In this lab, we will create a demo to provision personal user credential and Wi-
 The solution architect would be separated into two part: (1) Get User Credential by Android app. (2) Android app provision the user credential to device.
 (1)  Get User Credential by Android app：
 ![Device_certificate_creation.png](../pics/user_provision_approach/Device_certificate_creation.png) (2) Android app provision the user credential to device.
-[Image: Android app provision.png]
+![Android app provision.png](../pics/user_provision_approach/Android app provision.png)
 ## Prerequisite
 
 1. This demo take Ameba Z2 as reference board, which have to build code by IAR.
