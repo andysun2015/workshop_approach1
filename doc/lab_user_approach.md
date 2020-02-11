@@ -16,7 +16,7 @@ In this lab, we will create a demo to provision personal user credential and Wi-
 
 The solution architect would be separated into two part: (1) Get User Credential by Android app. (2) Android app provision the user credential to device.
 (1)  Get User Credential by Android app：
-![Device_certificate_creation.png](../pics/lab1/Device_certificate_creation.png) (2) Android app provision the user credential to device.
+![Device_certificate_creation.png](../pics/user_provision_approach/Device_certificate_creation.png) (2) Android app provision the user credential to device.
 [Image: Android app provision.png]
 ## Prerequisite
 
